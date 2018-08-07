@@ -1,0 +1,123 @@
+{
+  "name": "redux-saga-wrappo",
+  "version": "1.1.98",
+  "description": "",
+  "main": "dist/redux-saga-wrappo.min.js",
+  "browserslist": [
+    "> 1%",
+    "last 3 Chrome versions",
+    "last 3 Firefox versions",
+    "last 3 Safari versions",
+    "last 3 Edge versions",
+    "ie >= 10"
+  ],
+  "watch": {
+    "build": {
+      "patterns": [
+        "src"
+      ],
+      "extensions": "js,jsx"
+    }
+  },
+  "scripts": {
+    "start": "npm-watch",
+    "build": "yarn run clean && cross-env BABEL_ENV=production webpack --config config/webpack.config.js --progress --profile",
+    "clean": "rimraf dist",
+    "precommit": "lint-staged",
+    "prepublishOnly": "yarn build",
+    "test": "jest --config config/jest.config.js --bail",
+    "test:watch": "jest --config config/jest.config.js --watch"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "yarn test",
+      "eslint -f pretty --fix",
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "jest": {
+    "transform": {
+      ".js$": "babel-jest"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codedsphere/redux-saga-wrapo.git"
+  },
+  "author": "Sebastian W <gswang88@gmail.com> (http://www.codedsphere.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codedsphere/redux-saga-wrapo/issues"
+  },
+  "homepage": "https://github.com/codedsphere/redux-saga-wrapo#readme",
+  "dependencies": {
+    "@babel/runtime": "^7.0.0-beta.56",
+    "fingerprintjs2": "^1.8.0",
+    "history": "^4.7.2",
+    "lodash-es": "^4.17.10",
+    "map-props": "^1.0.0",
+    "qs": "^6.5.1",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-redux": "^5.0.7",
+    "react-router-redux": "^5.0.0-alpha.9",
+    "redux": "^4.0.0",
+    "redux-form": "^7.3.0",
+    "redux-persist": "^5.9.1",
+    "redux-saga": "^0.16.0"
+  },
+  "resolutions": {
+    "babel-core": "^7.0.0-bridge.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.56",
+    "@babel/plugin-proposal-class-properties": "^7.0.0-beta.56",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0-beta.56",
+    "@babel/plugin-transform-react-constant-elements": "^7.0.0-beta.56",
+    "@babel/plugin-transform-react-inline-elements": "^7.0.0-beta.56",
+    "@babel/plugin-transform-runtime": "^7.0.0-beta.56",
+    "@babel/polyfill": "^7.0.0-beta.56",
+    "@babel/preset-env": "^7.0.0-beta.56",
+    "@babel/preset-react": "^7.0.0-beta.56",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^8.1.2",
+    "babel-jest": "^22.4.3",
+    "babel-loader": "^8.0.0-beta.4",
+    "babel-plugin-dynamic-import-node-babel-7": "^2.0.7",
+    "babel-plugin-import": "^1.8.0",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "babel-plugin-syntax-trailing-function-commas": "^6.22.0",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.13",
+    "circular-dependency-plugin": "^5.0.2",
+    "cross-env": "^5.1.4",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-formatter-pretty": "^1.3.0",
+    "eslint-plugin-babel": "^5.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.7.0",
+    "eslint-plugin-redux-saga": "^0.8.0",
+    "jest": "^23.4.2",
+    "jest-environment-jsdom-global": "^1.0.3",
+    "jest-enzyme": "^6.0.0",
+    "lint-staged": "^7.1.0",
+    "lodash": "^4.17.10",
+    "npm-watch": "^0.3.0",
+    "redux-mock-store": "^1.5.1",
+    "rimraf": "^2.6.2",
+    "webpack": "^4.16.5",
+    "webpack-bundle-analyzer": "^2.13.1",
+    "webpack-cli": "^3.1.0"
+  },
+  "peerDependencies": {
+    "babel-core": "6.x || ^7.0.0-bridge.0",
+    "react": "^15.x || ^16.x",
+    "react-dom": "^15.x || ^16.x"
+  }
+}
