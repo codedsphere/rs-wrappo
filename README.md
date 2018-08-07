@@ -1,12 +1,12 @@
 # Redux-Saga-Wrappo
 
-[![build status](https://img.shields.io/travis/codedsphere/redux-saga-wrappo/master.svg?style=flat-square)](https://travis-ci.org/codedsphere/redux-saga-wrappo)
-[![npm version](https://img.shields.io/npm/v/redux-saga-wrappo.svg?style=flat-square)](https://www.npmjs.com/package/redux-saga-wrappo)
-[![npm downloads](https://img.shields.io/npm/dm/redux-saga-wrappo.svg?style=flat-square)](https://www.npmjs.com/package/redux-saga-wrappo)
+[![build status](https://img.shields.io/travis/codedsphere/rs-wrappo/master.svg?style=flat-square)](https://travis-ci.org/codedsphere/rs-wrappo)
+[![npm version](https://img.shields.io/npm/v/rs-wrappo.svg?style=flat-square)](https://www.npmjs.com/package/rs-wrappo)
+[![npm downloads](https://img.shields.io/npm/dm/rs-wrappo.svg?style=flat-square)](https://www.npmjs.com/package/rs-wrappo)
 
 ```js
-npm install --save redux-saga-wrappo
-yarn add redux-saga-wrappo
+npm install --save rs-wrappo
+yarn add rs-wrappo
 ```
 
 ## What is this?
@@ -27,10 +27,10 @@ We will try our best to work on this repo to improve it in the future.
 ## Installation
 
 ```
-npm install --save redux-saga-wrappo
+npm install --save rs-wrappo
 ```
 
-Then, to enable Redux-Saga-Wrappo,
+Then, to enable rs-wrappo,
 
 ```js
 //Index.js
